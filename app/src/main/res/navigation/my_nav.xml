@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/setAppUsageScreen">
+
+    <fragment
+        android:id="@+id/installedAppScreen"
+        android:name="com.example.cyberdive.views.InstalledAppScreen"
+        android:label="fragment_installed_app_screen"
+        tools:layout="@layout/fragment_installed_app_screen" />
+    <fragment
+        android:id="@+id/setAppUsageScreen"
+        android:name="com.example.cyberdive.views.SetAppUsageScreen"
+        android:label="fragment_set_app_usage_screen"
+        tools:layout="@layout/fragment_set_app_usage_screen" >
+        <action
+            android:id="@+id/action_setAppUsageScreen_to_installedAppScreen"
+            app:destination="@id/installedAppScreen" />
+    </fragment>
+</navigation>
